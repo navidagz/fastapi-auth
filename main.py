@@ -43,7 +43,7 @@ app.include_router(
 )
 # Manage users
 app.include_router(
-    fastapi_users.get_users_router(jwt_authentication, requires_verification=True),
+    fastapi_users.get_users_router(requires_verification=True),
     prefix="/users",
     tags=["users"],
 )
