@@ -47,5 +47,6 @@ app.include_router(
 fastapi_users.get_refresh_token = types.MethodType(get_refresh_token_router, fastapi_users)
 app.include_router(
     fastapi_users.get_refresh_token(jwt_authentication, requires_verification=True),
-    prefix=AUTH_V1_PREFIX
+    prefix=AUTH_V1_PREFIX,
+    tags=["auth"]
 )
