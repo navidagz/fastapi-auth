@@ -1,5 +1,5 @@
-from fastapi import APIRouter, Depends, HTTPException, Response, status
-from fastapi.openapi.models import Response
+from fastapi import APIRouter, HTTPException, status
+from fastapi import Depends
 from fastapi_users.authentication import BaseAuthentication
 from fastapi_users.router.common import ErrorCode
 
