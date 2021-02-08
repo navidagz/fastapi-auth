@@ -5,16 +5,11 @@ from fastapi import FastAPI
 from config.after_actions import after_verification, after_verification_request
 from config.fastapi_users import fastapi_users
 from config.jwt import jwt_authentication
+from config.route_prefix import AUTH_V1_PREFIX, AUTH_TAGS, USERS_V1_PREFIX, USERS_TAGS
 from config.settings import settings
 from routers.v1.auth import get_refresh_token_router, get_verify_account_router
 
 app = FastAPI()
-
-AUTH_V1_PREFIX = "/api/v1/auth"
-AUTH_TAGS = ["Auth"]
-
-USERS_V1_PREFIX = "/api/v1/users"
-USERS_TAGS = ["Users"]
 
 # Register
 app.include_router(
